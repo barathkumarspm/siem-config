@@ -1,0 +1,20 @@
+{
+  "test_case_name": "ubuntu-syslog",
+  "description": "Ubuntu Syslog",
+  "test_specification": {
+    "encoding": "utf8_string",
+    "log": "<34>1 2022-12-08T10:08:37.031Z test-host su - - - 'su root' failed for host on /dev/pts/8"
+  },
+  "assertions": [
+    {
+      "assertion_type": "path_and_value_matches",
+      "json_path": "$.parsedMessages[0].syslog_appname",
+      "expected_pattern": "su",
+      "negated_pattern": false,
+      "active": true
+    }
+  ],
+  "author": "siembol",
+  "version": 1,
+  "config_name": "ubuntu-syslog"
+}
