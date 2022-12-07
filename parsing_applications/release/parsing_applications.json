@@ -1,0 +1,31 @@
+{
+  "parsing_applications_version": 1,
+  "parsing_applications": [
+    {
+      "parsing_app_name": "ubuntu-syslog",
+      "parsing_app_version": 1,
+      "parsing_app_author": "siembol",
+      "parsing_app_description": "Ubuntu Syslog",
+      "parsing_app_settings": {
+        "parsing_app_type": "single_parser",
+        "input_topics": [
+          "ubuntu-syslog"
+        ],
+        "error_topic": "siembol-errors",
+        "num_workers": 1,
+        "input_parallelism": 1,
+        "parsing_parallelism": 1,
+        "output_parallelism": 1,
+        "parse_metadata": false,
+        "max_num_fields": 300,
+        "max_field_size": 40000
+      },
+      "parsing_settings": {
+        "single_parser": {
+          "output_topic": "siembol-enrichment",
+          "parser_name": "ubuntu-syslog"
+        }
+      }
+    }
+  ]
+}
