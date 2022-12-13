@@ -1,7 +1,7 @@
 {
   "rule_name": "ubuntu-syslog",
   "rule_author": "siembol",
-  "rule_version": 2,
+  "rule_version": 3,
   "rule_description": "Ubuntu Syslog",
   "source_type": "ubuntu-syslog",
   "matchers": [
@@ -16,7 +16,7 @@
   ],
   "table_mapping": {
     "table_name": "su",
-    "joining_key": "syslog_appname",
+    "joining_key": "$(syslog_appname)",
     "enriching_fields": [
       {
         "table_field_name": "syslog_appname",
